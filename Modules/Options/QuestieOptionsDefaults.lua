@@ -119,7 +119,9 @@ function QuestieOptionsDefaults:Load()
             showRaidQuests = true,
             showPvPQuests = true,
             showAQWarEffortQuests = false,
-            showQuestsInNpcTooltip = true
+            showQuestsInNpcTooltip = true,
+            enableWideQuestLog = true,
+            enableQuestLogLevelBadges = true
         },
         profile = {minimap = {hide = false}}
     }

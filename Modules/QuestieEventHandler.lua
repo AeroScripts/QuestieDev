@@ -12,6 +12,8 @@ local _EventHandler = {}
 -------------------------
 ---@type QuestieQuest
 local QuestieQuest = QuestieLoader:ImportModule("QuestieQuest")
+---@type QuestieQuestLog
+local QuestieQuestLog = QuestieLoader:ImportModule("QuestieQuestLog")
 ---@type QuestieJourney
 local QuestieJourney = QuestieLoader:ImportModule("QuestieJourney")
 ---@type QuestieComms
@@ -193,6 +195,8 @@ function _EventHandler:PlayerLogin()
         -- if compiled db exists and is up to date
             QuestieCleanup:Run()
         -- end
+
+        QuestieQuestLog:Initialize()
     end
 
     local function stage2()
